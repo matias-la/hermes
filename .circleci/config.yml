@@ -553,6 +553,8 @@ jobs:
             cmake --build ./embuild --target hermesc
             cmake --build ./embuild --target emhermesc
             EMHERMESC="$PWD/embuild/bin/emhermesc.js" node ./hermes/tools/emhermesc/test.js
+      - store_artifacts:
+          path: /tmp/hermes/bin/
   test-e2e:
     executor:
       name: android/android-machine
