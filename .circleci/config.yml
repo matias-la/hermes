@@ -20,12 +20,6 @@ workflows:
   build:
     jobs:
       - linux
-      - npm:
-          requires:
-            - android
-            - linux
-            - package-apple-runtime
-            - windows
       - test-emscripten
 
 # Default settings for Apple jobs (apple-runtime, test-apple-runtime)
