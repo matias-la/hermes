@@ -102,23 +102,7 @@ CallResult<HermesValue> directEval(
     Handle<StringPrimitive> str,
     const ScopeChain &scopeChain,
     bool singleFunction) {
-  // Convert the code into UTF8.
-  std::string code;
-  auto view = StringPrimitive::createStringView(runtime, str);
-  if (view.isASCII()) {
-    code = std::string(view.begin(), view.end());
-  } else {
-    SmallU16String<4> allocator;
-    convertUTF16ToUTF8WithReplacements(code, view.getUTF16Ref(allocator));
-  }
-
-  return evalInEnvironment(
-      runtime,
-      code,
-      Runtime::makeNullHandle<Environment>(),
-      scopeChain,
-      runtime.getGlobal(),
-      singleFunction);
+  return runtime.raiseSyntaxError("function constructor disabled in Hermes due to security reasons");
 }
 
 CallResult<HermesValue> eval(void *, Runtime &runtime, NativeArgs args) {
