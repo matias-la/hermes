@@ -30,9 +30,7 @@ workflows:
       - npm:
           requires:
             - android
-            - linux
             - package-apple-runtime
-            - windows
             - macos
       - emscripten
       - test-linux
