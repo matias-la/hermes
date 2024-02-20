@@ -31,7 +31,6 @@ workflows:
           requires:
             - android
             - package-apple-runtime
-            - macos
       - emscripten
       - test-linux
       - test-e2e
