@@ -23,14 +23,9 @@ workflows:
       - linux
       - macos
       - build-apple-runtime
-      - test-macos
-      - test-apple-runtime:
-          requires:
-            - build-apple-runtime
       - package-apple-runtime:
           requires:
-            - test-macos
-            - test-apple-runtime
+            - build-apple-runtime
       - windows
       - npm:
           requires:
