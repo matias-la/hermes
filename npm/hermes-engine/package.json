@@ -1,12 +1,12 @@
 {
-  "name": "hermes-engine",
-  "version": "%VERSION%",
+  "name": "@exodus/hermes-engine",
+  "version": "0.0.1-rc.0",
   "private": false,
   "description": "A JavaScript engine optimized for running React Native on Android",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:facebook/hermes.git"
+    "url": "git@github.com:ExodusMovement/hermes.git"
   },
   "files": [
     "README.md",
